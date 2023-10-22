@@ -25,7 +25,7 @@ class Formatter {
         this.options = { ...defaultOptions, ...options };
         this.stack = [];
     }
-    static format(value, options) {
+    static format(value, options = {}) {
         const formatter = new this(options);
         return formatter.run(value, '', 1);
     }
