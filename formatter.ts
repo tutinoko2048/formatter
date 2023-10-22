@@ -36,7 +36,7 @@ class Formatter {
     this.stack = [];
   }
   
-  public static format(value: any, options?: FormatterOptions): string {
+  public static format(value: any, options?: FormatterOptions = {}): string {
     const formatter = new this(options);
     return formatter.run(value, '', 1);
   }
